@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="server.jsp" method="post">
+		이름:<input type="text" name="name" />
+		비번:<input type="password" name="pw" />
+		<br/>
+		<fieldset>
+			<legend>성별</legend>
+			<input type ="radio" name="gender" value="man">남자
+			<input type ="radio" name="gender" value="woman">여자 			
+		</fieldset>
+		<input type="file">
+		<textarea rows="3" cols="30"></textarea>
+		<select name="cnt">
+			<option value="k">바지</option>
+			<option value="k">치마</option>
+		</select>
+		
+		<!--서버로 데이터를 전송하는 역할 -->
+		<input type="submit" value="전송" />
+		<!-- 폼의 데이터를 초기화하는 역 -->
+		<input type="reset" value="취소" />
+	</form>
+</body>
+</html>
