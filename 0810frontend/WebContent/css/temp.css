@@ -1,0 +1,11 @@
+h3{color:blue}
+
+.article,#atid{color:green}  /*항목이 한개일때는 ;은 선택사항*/
+
+h3:hover{color:gray;}
+h3:active{background:yellow;}
+
+h4{
+	font-size:100px;
+	text-shadow:10px 10px #cccc99, 20px 20px blue;
+}

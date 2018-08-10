@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table align="center">
+		<tr>
+			<td colspan="2" align="center">
+				<h2>회원가입</h2>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">이메일&nbsp;</td>
+			<td>&nbsp;
+			<input type="text" name="email" id="email" size="30"/>
+			<div id="emaildiv"></div>    <!-- div(아래)와 span(옆) 글자 바꿔서 비교해본다. -->				
+			</td>			
+		</tr>
+		<tr>
+			<td align="right">비밀번호&nbsp;</td>
+			<td>&nbsp;
+			<input type="password" name="password" size="30"/>
+			
+			</td>			
+		</tr>
+		<tr>
+			<td align="right">비밀번호확인&nbsp;</td>  
+			<td>&nbsp;
+			<input type="password" size="30"/>	<!--비밀번호확인은 name을 전송할 필요가없다. -->
+			</td>			
+		</tr>
+		<tr>
+			<td align="right">성별&nbsp;</td>  
+			<td>&nbsp;
+			<input type="radio" name="gender" value="man" checked="checked"/>
+														<!--미리 하나를 체크 해주면 좋다.입력하지 않아도 defult값이 있으니-->
+				남자
+			<input type="radio" name="gender" value="woman"/>	
+				여
+			</td>			
+		</tr>
+		<tr>
+			<td align="right">전화번&nbsp;</td>  
+			<td>&nbsp;
+				<select name="phone">
+					<option value="010">010</option>
+					<option value="011">011</option>
+				</select> 
+				<input type="text" size="21"/>
+			</td>			
+		</tr>
+		<tr>
+			<td  colspan="2" align="center">
+			<input type="reset" value="작성취소"/>
+			&nbsp;<input type="submit" value="회원가"/>
+			&nbsp;<input type="button" value="메인으로"/>
+			</td>
+		</tr>
+	</table>
+</body> 
+<script>
+	document.getElementById("email").onblur=function(){
+		document.getElementById("emaildiv").innerHTML="사용이 불가능한 이메일입니다."
+	}
+</script>
+</html>
