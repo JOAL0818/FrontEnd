@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연산자</title>
+<script>
+	//증감연산자 확인 
+	var i=0
+	i++
+	++i
+	alert(i)
+	//증감연산자에서 주의할부분 
+	i=0
+	alert(i++)
+	alert(++i)
+	var result = i++ + i++
+	alert(result)
+	
+	//조건연산자 
+	i=4
+	var x = i>0 ? 10 : i++
+	alert(i)
+	
+	//논리연산자 - don't care
+	i=0
+	result = 10>5 && i++>0
+	alert(result)
+	alert(i)
+	i=0
+	
+	result = 10<5 && i++>0
+	alert(result)
+	alert(i)
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

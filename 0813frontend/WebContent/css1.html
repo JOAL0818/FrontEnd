@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* outline과 resize */
+	#pid{
+		width:200px;
+		background:#fdd;
+		border: 2px solid #123456;
+		outline: 2px solid #ffaa00;
+		outline-offset:3px;
+		resize:both;
+		overflow:auto;
+	}
+	
+	/* div는 영역태그 */
+	div{
+		background-color:papayawhip;
+		width:300px;
+		height:100px;
+		/*transform은 원본자체는 변경을 안하고 보여주는 것만 변경한다. 원본이었다면 출력화면에서 div옆에 아무것도 오면 안된다.*/
+		/*아래와 같 실행될 브라우저별로 vender prefix를 달아줘야한다.*/
+		-webkit-transform:rotate(30deg);
+		-moz-transform:rotate(30deg);
+		-ms-transform:rotat(30deg);
+	}
+	
+	a{
+		/*주위에 아무것도 배치되지 않도록 블록요소로 변경*/
+		display:block;
+		width:300px;
+		height:30px;
+		background:#123456;
+		/*transitoin 애니메이션 적용하면 천천히커지고 천천히줄어든다.*/
+		-webkit-transition:all 3.0s
+		
+	}
+	a:hover{
+		width:450px;
+		background-color:skyblue;
+		opacity:0.0;
+	}
+	
+</style>
+</head>
+<body>
+	<!-- 보통제목은 h2이용 -->
+	<h2> css-resize와 outline </h2>
+	<p class="content" id="pid">
+	동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세
+	무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세</p>
+	
+	<div></div>>
+	
+	<a href="#">애니메이션 메뉴</a>
+	
+	
+</body>
+</html>
