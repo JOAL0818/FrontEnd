@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열의 생성과 사용</title>
+</head>
+<body>
+
+</body>
+<script>
+	//배열 생성 //구현한 자료구조는 doubleLinkedList이다.
+	var girlgroup = [ "원더걸스", "소녀시대", "카라" ]
+
+	//데이터 추가 - 마지막에 추가  // 스택을 구현하기 위해 만든 함수
+	girlgroup.push("레드벨벳") //반대는 pop
+
+	//데이터 추가 - 맨 앞에 추가  // 큐를 구현하기 위해 만든 함수
+	girlgroup.unshift("코코") //반대는 shift
+
+	//오름차순 정렬을 하려면 굳이 sort의 괄호 안에 함수를 넣을 필요가 없지만 (기본이 오름차순)
+	girlgroup.sort(function(left, right) {
+		//내림차순 정렬을 할 경우 함수를 이용해 준다.
+		if (left > right)
+			return -1
+		else if (left == right)
+			return 0
+		else
+			return 1
+	})
+
+	//배열의 모든 요소를 접근
+	for (temp in girlgroup) {
+		document.writeln(girlgroup[temp] + "<br/>")
+	}
+
+	//숫자배열이지만 문자열로 간주하고 정렬하기 때문에 178이 65보다 작다고 판단하여 정렬한다.
+	var scores = [ 98, 178, 87, 65, 99 ]
+	scores.sort(function(left, right) {
+		return left - right
+	})
+	for (temp in scores) {
+		document.writeln(scores[temp] + "<br/>")
+	}
+</script>
+</html>

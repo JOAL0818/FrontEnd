@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열 관련 함수</title>
+</head>
+<body>
+
+</body>
+<script>
+	var ar = [ "차범근", "반바스텐", "굴리트", "클라이베르트", "베르칸프", "로번" ]
+	var first = ar.slice(0, 3)
+	//alert(first)
+
+	var second = ar.slice(3, 6)
+	//alert(second)
+
+	/* 	//filter는 매개변수가 1개이고 boolean을 리턴하는 함수를 매개변수로 받아서, true를 리턴하는 내용만 가지고 새로운 배열을 만들어서 리턴한다.
+	 //4글자 이상인 데이터만 추출하기
+	 var result = ar.filter(function(element){
+	 return element.length >= 4
+	 })
+	 //트 로 끝나는 데이터만 추출
+	 result = ar.filter(function(element){
+	 return element.charAt(element.length-1) == '트'
+	 }) */
+
+	//map은 리턴되는 데이터를 가지고 배열을 새로 생성해 준다.
+	result = ar.map(function(element) {
+		if (element == null)
+			element == "이름없음"
+		return element
+	})
+
+	//alert(result)
+
+	var json = '["HTML", "CSS", "JavaScript"]'
+
+	json = '{"language":"Java", "db":"Oracle"}'
+
+	result = JSON.parse(json)
+	for (idx in result) {
+		document.writeln(idx + ":" + result[idx])
+	}
+	
+	window.open('https://www.google.co.kr', '구글', 'width:400, height:300, resizable = no' )
+	
+</script>
+</html>
