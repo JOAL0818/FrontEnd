@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--데이터만들기-->
+<data> <!--데이터를 만드는 루트--> 
+	<mem> <!--클래스 이름 만들고 아래 변수이름적어주고 데이터를 넣는다.-->
+		<name>을지문덕</name>
+		<part>영업</part>
+	</mem>
+	<mem>
+		<name>강감찬</name>
+		<part>총무</part>
+	</mem>
+</data>
