@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!-- 불필요한 공백제거 -->    
+<%@ page trimDirectiveWhitespaces="true" %>
+    
+<!-- 패키지 import -->    
+<%@ page import="java.util.*" %>    
+   
+<%	//자바코드 쓰듯이 쓴다	
+	//현재시간을 갖는 캘린더 객체만들기 
+	Calendar calendar = new GregorianCalendar();
+ %>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스크립트 사용</title>
+</head>
+<body>
+<p>년도:<%= calendar.get(Calendar.YEAR) %><br/>	
+	월:<%= calendar.get(Calendar.MONTH) %><br/>	
+	일:<%= calendar.get(Calendar.DATE) %><br/>	
+</body>
+</html>
